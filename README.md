@@ -1,0 +1,3 @@
+# Sixpack
+
+Sixpack boilerplate.
