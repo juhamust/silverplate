@@ -1,10 +1,12 @@
 import template from './home.html';
+import readme from '../../assets/html/readme.html';
 import './home.scss';
 
 let $inject = ['Backend'];
 export class HomeController {
   constructor(Backend) {
     this.name = 'home';
+    this.contents = readme;
     this.starCount = '...';
     this.Backend = Backend;
   }

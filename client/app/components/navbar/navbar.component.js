@@ -24,7 +24,9 @@ NavbarController.$inject = $inject;
 
 let navbarComponent = {
   restrict: 'E',
-  bindings: {},
+  bindings: {
+    caption: '='
+  },
   template,
   controller: NavbarController,
   controllerAs: 'vm'

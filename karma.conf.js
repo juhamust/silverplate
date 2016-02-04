@@ -38,8 +38,11 @@ module.exports = function (config) {
           { test: /\.js/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
           { test: /\.html/, loader: 'raw' },
           { test: /\.json/, loader: 'json' },
-          { test: /\.styl$/, loader: 'style!css!stylus' },
-          { test: /\.css$/, loader: 'style!css' }
+          { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass' ]},
+          { test: /\.css$/, loaders: ['style', 'css', 'postcss' ]},
+          { test: /\.(jpe?g|png|gif|svg)$/i, loaders: [
+           'file?hash=sha512&digest=hex&name=[hash].[ext]'
+          ]}
         ]
       }
     },

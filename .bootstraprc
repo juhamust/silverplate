@@ -26,11 +26,11 @@ extractStyles: true
 
 # Customize Bootstrap variables that get imported before the original Bootstrap variables.
 # Thus original Bootstrap variables can depend on values from here.
-preBootstrapCustomizations: ./client/app/styles/bootstrap.scss
+preBootstrapCustomizations: ./client/app/assets/styles/bootstrap.scss
 
 # This gets loaded after bootstrap/variables is loaded
 # So you can refer to bootstrap variables
-bootstrapCustomizations: ./client/app/styles/variables.scss
+bootstrapCustomizations: ./client/app/assets/styles/variables.scss
 
 # With CSS Modules we load all application styles directly in React components
 # appStyles: ./app/styles/app.scss

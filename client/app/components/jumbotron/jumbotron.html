@@ -1,7 +1,8 @@
 <div class="jumbotron container-fluid">
   <div class="row">
     <div class="col-sm-12">
-      <h1>{{ vm.caption }}</h1>
+      <h1 class="jumbotron__caption" ng-if="vm.caption">{{ vm.caption }}</h1>
+      <div class="jumbotron__logo"></div>
       <p>{{ vm.body }}<p>
     </div>
   </div>

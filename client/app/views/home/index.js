@@ -1,9 +1,11 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import ngSanitize from 'angular-sanitize';
 import homeComponent from './home.component';
 
 let homeModule = angular.module('home', [
-  uiRouter
+  uiRouter,
+  ngSanitize
 ])
 
 .config(($stateProvider) => {

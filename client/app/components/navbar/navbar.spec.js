@@ -1,7 +1,6 @@
 import NavbarModule from './navbar'
 import NavbarComponent, { NavbarController } from './navbar.component';
 import NavbarTemplate from './navbar.html';
-import AuthMock from '../../services/authentication/authentication.mock';
 
 describe('Navbar', () => {
   let $rootScope, makeController;
@@ -10,7 +9,7 @@ describe('Navbar', () => {
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new NavbarController(null, AuthMock);
+      return new NavbarController(null);
     };
   }));
 

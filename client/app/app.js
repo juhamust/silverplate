@@ -26,8 +26,8 @@ angular.module('app', [
 .config(($urlRouterProvider) => {
   'ngInject';
 
-  $urlRouterProvider.when('', '/home');
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.when('', '/');
+  $urlRouterProvider.otherwise('/');
 })
 
 .component('app', appComponent);

@@ -16,6 +16,7 @@ import loader from 'gulp-load-plugins';
 import webpackDevMiddelware from 'webpack-dev-middleware';
 import webpachHotMiddelware from 'webpack-hot-middleware';
 import colorsSupported from 'supports-color';
+import { markdown } from 'markdown';
 
 
 var plugins = loader();
@@ -73,12 +74,17 @@ gulp.task('clean', (cb) => {
   rimraf('dist', cb);
 });
 
-// use webpack.config.js to build modules
-gulp.task('__webpack', () => {
-  return gulp.src(paths.entry)
-    .pipe(webpack(require('./webpack.config')))
-    .pipe(gulp.dest(paths.output));
-});
+gulp.task('markdown', (cb) => {
+  let targetFile = path.join(__dirname, 'client/app/assets/html/readme.html');
+  let htmlContents = markdown.toHTML(fs.readFileSync('./README.md').toString());
+
+  return new Promise(function(resolve, reject) {
+    fs.writeFile(targetFile, htmlContents, 'utf8', (err) => {
+      if (err) reject(err);
+      resolve();
+    });
+  });
+})
 
 gulp.task('webpack', (cb) => {
   const config = require('./webpack.config');
@@ -96,14 +102,6 @@ gulp.task('webpack', (cb) => {
     }));
 
     cb();
-  });
-});
-
-gulp.task('__serve', () => {
-  serve({
-    port: process.env.PORT || 3000,
-    open: false,
-    server: { baseDir: paths.output }
   });
 });
 
@@ -139,11 +137,6 @@ gulp.task('serve', () => {
 
 gulp.task('watch', ['serve']);
 
-gulp.task('__watch', () => {
-  let allPaths = [].concat([paths.js], paths.html, [paths.styl]);
-  gulp.watch(allPaths, ['webpack', reload]);
-});
-
 gulp.task('generate:component', (cb) => {
   generate(yargs.argv.name, 'component', 'components')
   .then(() => {
@@ -172,7 +165,7 @@ gulp.task('generate:service', (cb) => {
 });
 
 gulp.task('build', (done) => {
-  sync('clean', 'webpack', done);
+  sync('clean', 'markdown', 'webpack', done);
 });
 
 gulp.task('default', (done) => {
