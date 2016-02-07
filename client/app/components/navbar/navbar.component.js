@@ -11,8 +11,10 @@ export class NavbarController {
     this.menu = [{
       title: 'Home',
       state: 'home'
+    }, {
+      title: 'Demo',
+      state: 'demo'
     }];
-
   }
 
   isActive(state) {

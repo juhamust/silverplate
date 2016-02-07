@@ -1,0 +1,21 @@
+<div class="demo container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="demo__title">{{ vm.name }}</h1>
+      <div class="alert alert-success" role="alert">This is a successful alert example!</div>
+
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" ng-class="vm.progressClass" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" ng-style="vm.progressStyle">
+          <span class="sr-only">45% Complete</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-success demo__button center-block" ng-click="vm.hackon()">Hack on!</button>
+    </div>
+  </div>
+</div>
