@@ -1,10 +1,13 @@
 import template from './<%= slugCaseName %>.html';
 
+let $inject = [];
 export class <%= pascalCaseName %>Controller {
   constructor() {
     this.name = '<%= slugCaseName %>';
   }
 }
+
+<%= pascalCaseName %>Controller.$inject = $inject;
 
 let <%= pascalCaseName %>Component = {
   restrict: 'E',
