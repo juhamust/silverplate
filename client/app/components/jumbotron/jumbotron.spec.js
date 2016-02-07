@@ -1,4 +1,4 @@
-import JumbotronModule from './jumbotron'
+import JumbotronModule from './index'
 import JumbotronComponent, { JumbotronController } from './jumbotron.component';
 import JumbotronTemplate from './jumbotron.html';
 
