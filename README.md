@@ -37,7 +37,9 @@ Apache 2
 
 ## Release notes
 
-TBD
+#### 0.1.0 (7.1.2016)
+
+- Initial release
 
 -----
 
