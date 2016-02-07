@@ -5,7 +5,7 @@ with following features (preconfigured and read to use):
 
 - **ES6** support with Babel
 - **Gulp** with some commonly used plugins
-- **Webpack** with both development and production optimized builds
+- **Webpack** with both development and production optimized builds: Autoreload, minification
 - **Angular 1.x** with component support (Angular 1.5) and commonly used modules
 - **Bootstrap** 4.x with Sass
 - **Generator** for components, services and views
@@ -29,4 +29,16 @@ npm install
 npm start
 ```
 
-Happy hacking!
+That's it, happy hacking!
+
+## License
+
+Apache 2
+
+## Release notes
+
+TBD
+
+-----
+
+[![Build Status](https://travis-ci.org/juhamust/silverplate.svg?branch=master)](https://travis-ci.org/juhamust/silverplate)

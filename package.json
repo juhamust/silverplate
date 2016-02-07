@@ -71,7 +71,8 @@
   },
   "scripts": {
     "start": "gulp",
-    "test": "karma start"
+    "test": "karma start",
+    "gulp": "gulp"
   },
   "keywords": [
     "angular",
