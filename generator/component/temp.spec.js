@@ -1,4 +1,4 @@
-import <%= pascalCaseName %>Module from './<%= slugCaseName %>';
+import <%= pascalCaseName %>Module from './index';
 import <%= pascalCaseName %>Component, { <%= pascalCaseName %>Controller } from './<%= slugCaseName %>.component';
 import <%= pascalCaseName %>Template from './<%= slugCaseName %>.html';
 
