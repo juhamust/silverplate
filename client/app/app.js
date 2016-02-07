@@ -6,6 +6,7 @@ import angularComponent from 'angular-component';
 import Services from './services';
 import Components from './components';
 import Views from './views';
+import 'highlight.js/styles/github.css';
 import 'normalize.css';
 import './app.scss';
 

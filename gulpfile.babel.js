@@ -16,7 +16,8 @@ import loader from 'gulp-load-plugins';
 import webpackDevMiddelware from 'webpack-dev-middleware';
 import webpachHotMiddelware from 'webpack-hot-middleware';
 import colorsSupported from 'supports-color';
-import { markdown } from 'markdown';
+import highlight from 'highlight.js';
+import marked from 'marked';
 
 
 var plugins = loader();
@@ -75,8 +76,18 @@ gulp.task('clean', (cb) => {
 });
 
 gulp.task('markdown', (cb) => {
+  marked.setOptions({
+    renderer: new marked.Renderer(),
+    highlight: function(code) {
+      return highlight.highlightAuto(code).value;
+    },
+    gfm: true,
+    tables: true,
+    sanitize: true
+  });
+
   let targetFile = path.join(__dirname, 'client/app/assets/html/readme.html');
-  let htmlContents = markdown.toHTML(fs.readFileSync('./README.md').toString());
+  let htmlContents = marked(fs.readFileSync('./README.md').toString());
 
   return new Promise(function(resolve, reject) {
     fs.writeFile(targetFile, htmlContents, 'utf8', (err) => {
