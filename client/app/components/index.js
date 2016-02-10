@@ -1,6 +1,6 @@
 import angular from 'angular';
-import Navbar from './navbar/navbar';
-import Jumbotron from './jumbotron/jumbotron';
+import Navbar from './navbar';
+import Jumbotron from './jumbotron';
 
 let componentModule = angular.module('app.components', [
   Navbar.name,

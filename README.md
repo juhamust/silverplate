@@ -37,7 +37,11 @@ Apache 2
 
 ## Release notes
 
-#### 0.1.0 (7.1.2016)
+#### 0.1.1 (10.2.2016)
+
+- Fixed require
+
+#### 0.1.0 (7.2.2016)
 
 - Initial release
 

@@ -1,4 +1,4 @@
-import NavbarModule from './navbar'
+import NavbarModule from './index'
 import NavbarComponent, { NavbarController } from './navbar.component';
 import NavbarTemplate from './navbar.html';
 
