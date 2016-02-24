@@ -2,24 +2,11 @@ import template from './home.html';
 import readme from '../../assets/html/readme.html';
 import './home.scss';
 
-let $inject = ['Backend'];
+let $inject = [];
 export class HomeController {
-  constructor(Backend) {
+  constructor() {
     this.name = 'home';
     this.contents = readme;
-    this.starCount = '...';
-    this.Backend = Backend;
-  }
-
-  showRepoInfo() {
-    this.Backend.getGithubInfo()
-    .then((resp) => {
-      this.starCount = resp.data.stargazers_count;
-    })
-    .catch((err) => {
-      this.starCount = 'Failure';
-      console.warn('Request failed', err);
-    })
   }
 }
 

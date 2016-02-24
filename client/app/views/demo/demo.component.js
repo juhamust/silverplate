@@ -1,9 +1,11 @@
 import template from './demo.html';
 
-let $inject = ['$interval'];
+let $inject = ['$interval', 'Backend'];
 export class DemoController {
-  constructor($interval) {
+  constructor($interval, Backend) {
     this.name = 'demo';
+    this.Backend = Backend;
+    this.starCount = '-';
     this.progressValue = 0;
     this.progressStyle = {
       width: '10%',
@@ -22,8 +24,19 @@ export class DemoController {
     }, 1500);
   }
 
-  hackon() {
+  colorMe() {
     this.progressClass['progress-bar-success'] = !this.progressClass['progress-bar-success'];
+  }
+
+  fetchRepoInfo() {
+    this.Backend.getGithubInfo()
+    .then((resp) => {
+      this.starCount = resp.data.stargazers_count;
+    })
+    .catch((err) => {
+      this.starCount = 'Failure';
+      console.warn('Request failed', err);
+    })
   }
 }
 

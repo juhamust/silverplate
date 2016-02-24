@@ -8,7 +8,7 @@ class Backend {
   }
 
   getGithubInfo() {
-    return this.$http.get('https://api.github.com/repos/babel/babel');
+    return this.$http.get('https://api.github.com/repos/juhamust/silverplate');
   }
 
   static getInstance($http) {
