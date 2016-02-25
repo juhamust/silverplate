@@ -15,7 +15,15 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-success demo__button center-block" ng-click="vm.hackon()">Hack on!</button>
+      <div class="row">
+        <div class="col-xs-6">
+          <button type="button" class="btn btn-success demo__button center-block" ng-click="vm.colorMe()">Color me!</button>
+        </div>
+        <div class="col-xs-6">
+          <button type="button" class="btn btn-info demo__button center-block" ng-click="vm.fetchRepoInfo()">Repo stars? {{ vm.starCount }}</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

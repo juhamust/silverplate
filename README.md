@@ -10,6 +10,7 @@ with following features (preconfigured and read to use):
 - **Bootstrap** 4.x with Sass
 - **Generator** for components, services and views
 - **Karma** for unit testing with both Chrome and PhantomJS
+- **Docker** for hosting server
 
 Silverplate is proudly derivated from [NG6-Starter](https://github.com/AngularClass/NG6-starter)
 adding some opinionated modifications and additions on top of it.
@@ -31,11 +32,27 @@ npm start
 
 That's it, happy hacking!
 
+## Usage
+
+#### Docker(file)
+
+If you don't have Docker installed, [see Docker instructions](https://www.docker.com/). Once set up, run the commands:
+
+- Build Docker image: `npm run build:image`
+- Run Docker image: `npm run start:image`
+
+Now you're able to access outcome with browser: http://<dockerhost>:<port>/
+
 ## License
 
 Apache 2
 
 ## Release notes
+
+#### 0.2.0 (25.2.2016)
+
+- Added simple Dockerfile example
+- Fixed Backend example
 
 #### 0.1.1 (10.2.2016)
 

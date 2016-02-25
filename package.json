@@ -1,6 +1,6 @@
 {
   "name": "sixpack",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Boilerplate to start with ES6, Webpack, Angular and Bootstrap",
   "main": "index.js",
   "devDependencies": {
@@ -72,6 +72,9 @@
   "scripts": {
     "start": "gulp",
     "test": "karma start",
+    "build": "gulp build",
+    "build:image": "npm run build && docker build -t silverplate .",
+    "start:image": "docker run -Pit silverplate",
     "gulp": "gulp"
   },
   "keywords": [
@@ -82,7 +85,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://.git"
+    "url": "https://github.com/juhamust/silverplate.git"
   },
   "author": "Juha Mustonen",
   "license": "Apache-2.0"
