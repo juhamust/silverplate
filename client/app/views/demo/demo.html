@@ -1,28 +1,44 @@
 <div class="demo container-fluid">
+
+  <md-content>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>Toolbar with Icon Buttons</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </md-content>
+
+
   <div class="row">
     <div class="col-sm-12">
       <h1 class="demo__title">{{ vm.name }}</h1>
-      <div class="alert alert-success" role="alert">This is a successful alert example!</div>
 
-      <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>Warning!</strong> Better check yourself, you're not looking too good.
-      </div>
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised">Button</md-button>
+        <md-button class="md-raised md-primary">Primary</md-button>
+        <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+        <md-button class="md-raised md-warn">Warn</md-button>
+        <div class="label">Raised</div>
+      </section>
 
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" ng-class="vm.progressClass" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" ng-style="vm.progressStyle">
-          <span class="sr-only">45% Complete</span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-success demo__button center-block" ng-click="vm.colorMe()">Color me!</button>
-        </div>
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-info demo__button center-block" ng-click="vm.fetchRepoInfo()">Repo stars? {{ vm.starCount }}</button>
-        </div>
-      </div>
+      <section layout="row" layout-sm="column">
+        <md-button class="md-primary md-raised" ng-click="vm.showAlert($event)" flex="100" flex-gt-md="auto">
+          Alert Dialog
+        </md-button>
+        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+      </section>
 
     </div>
   </div>

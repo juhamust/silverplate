@@ -1,10 +1,12 @@
+import angular from 'angular';
 import template from './demo.html';
 
-let $inject = ['$interval', 'Backend'];
+let $inject = ['$interval', 'Backend', '$mdDialog'];
 export class DemoController {
-  constructor($interval, Backend) {
+  constructor($interval, Backend, $mdDialog) {
     this.name = 'demo';
     this.Backend = Backend;
+    this.$mdDialog = $mdDialog;
     this.starCount = '-';
     this.progressValue = 0;
     this.progressStyle = {
@@ -23,6 +25,22 @@ export class DemoController {
       this.progressStyle.width = `${this.progressValue}%`;
     }, 1500);
   }
+
+  showAlert(ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    // Modal dialogs should fully cover application
+    // to prevent interaction outside of dialog
+    this.$mdDialog.show(
+      this.$mdDialog.alert()
+        .parent(angular.element(document.querySelector('#popupContainer')))
+        .clickOutsideToClose(true)
+        .title('This is an alert title')
+        .textContent('You can specify some description text in here.')
+        .ariaLabel('Alert Dialog Demo')
+        .ok('Got it!')
+        .targetEvent(ev)
+    );
+  };
 
   colorMe() {
     this.progressClass['progress-bar-success'] = !this.progressClass['progress-bar-success'];

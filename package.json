@@ -67,6 +67,8 @@
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4",
     "webpack-stream": "^2.0.0",
+    "angular-animate": "^1.5.0",
+    "angular-material": "^1.0.6",
     "yargs": "^3.9.0"
   },
   "scripts": {
@@ -88,5 +90,9 @@
     "url": "https://github.com/juhamust/silverplate.git"
   },
   "author": "Juha Mustonen",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "angular-aria": "^1.5.0",
+    "angular-messages": "^1.5.0"
+  }
 }
