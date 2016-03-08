@@ -34,6 +34,10 @@ That's it, happy hacking!
 
 ## Usage
 
+#### Material design
+
+- Icons: https://design.google.com/icons/
+
 #### Docker(file)
 
 If you don't have Docker installed, [see Docker instructions](https://www.docker.com/). Once set up, run the commands:
