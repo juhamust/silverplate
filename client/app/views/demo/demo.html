@@ -1,51 +1,30 @@
 <div class="demo container-fluid">
 
-  <md-content>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
-          <i class="material-icons md-48">menu</i>
-        </md-button>
-        <h2>
-          <span>Silverplate</span>
-        </h2>
-        <span flex></span>
-        <md-button class="md-icon-button" aria-label="Favorite">
-          <i class="material-icons md-48">favorite</i>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="More">
-          <i class="material-icons md-48">more_vert</i>
-        </md-button>
-      </div>
-    </md-toolbar>
-  </md-content>
+  <section layout="row">
+    <md-input-container class="sm-block" flex="90">
+      <label>Question</label>
+      <input ng-model="vm.question">
+    </md-input-container>
+    <md-input-container class="md-block" flex="10">
+      <md-button flex="10" class="md-raised md-primary" ng-click="vm.showCustomDialog($event)">Answer</md-button>
+    </md-input-container>
+  </section>
 
-
-  <div class="row">
-    <div class="col-sm-12">
-      <h1 class="demo__title">{{ vm.name }}</h1>
-
-      <i class="material-icons md-48">face</i>
-      <i class="material-icons md-48" style="color: red;">query_builder</i>
-
-      <md-icon md-font-icon="android" aria-label="android"></md-icon>
-      <md-icon class="icon_home" aria-label="Home"></md-icon>
-
-      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-        <md-button class="md-raised">Button</md-button>
-        <md-button class="md-raised md-primary">Primary</md-button>
-        <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-        <md-button class="md-raised md-warn">Warn</md-button>
-        <div class="label">Raised</div>
-      </section>
-
-      <section layout="row" layout-sm="column">
-        <md-button class="md-primary md-raised" ng-click="vm.showAlert($event)" flex="100" flex-gt-md="auto">
-          Alert Dialog
-        </md-button>
-        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
-      </section>
-
+  <section layout>
+    <div flex="10" layout layout-align="center center">
+      <span class="md-body-1">R</span>
     </div>
+    <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
+    </md-slider>
+    <div flex="20" layout layout-align="center center">
+      <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+    </div>
+  </section>
+
+  <div layout="row">
+    <md-button class="md-accent md-fab md-fab-bottom-right">
+      <md-icon class="material-icons md-48">cloud_download</md-icon>
+    </md-button>
   </div>
+
 </div>
