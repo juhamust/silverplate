@@ -46,7 +46,7 @@ If you don't have Docker installed, [see Docker instructions](https://www.docker
 - Build Docker image: `npm run build:image`
 - Run Docker image: `npm run start:image`
 
-Now you're able to access outcome with browser: http://<dockerhost>:<port>/
+Now you're able to access outcome with browser: `http://<dockerhost>:<port>/`
 
 ## License
 
