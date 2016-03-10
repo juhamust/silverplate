@@ -18,6 +18,11 @@ export class DemoController {
       'progress-bar-success': false
     };
 
+    this.items = [1,2,3,4,5];
+    this.selected = [];
+    this.toggle = this._toggle.bind(this);
+    this.exists = this._exists.bind(this);
+
     $interval(() => {
       this.progressValue += 10;
       if (this.progressValue > 100) {
@@ -26,6 +31,16 @@ export class DemoController {
       // Create style
       this.progressStyle.width = `${this.progressValue}%`;
     }, 1500);
+  }
+
+  _toggle(item, list) {
+    var idx = list.indexOf(item);
+    if (idx > -1) list.splice(idx, 1);
+    else list.push(item);
+  }
+
+  _exists(item, list) {
+    return list.indexOf(item) > -1;
   }
 
   showAlert(ev) {
