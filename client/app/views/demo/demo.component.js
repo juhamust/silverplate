@@ -1,13 +1,15 @@
 import _ from 'lodash';
 import angular from 'angular';
 import template from './demo.html';
+import './demo.scss';
 
-let $inject = ['$interval', 'Backend', '$mdDialog'];
+let $inject = ['$interval', 'Backend', '$mdDialog', '$mdToast'];
 export class DemoController {
-  constructor($interval, Backend, $mdDialog) {
+  constructor($interval, Backend, $mdDialog, $mdToast) {
     this.name = 'demo';
     this.Backend = Backend;
     this.$mdDialog = $mdDialog;
+    this.$mdToast = $mdToast;
     this.question = 'Follow the white rabbit?';
     this.starCount = '-';
     this.progressValue = 0;
@@ -42,6 +44,15 @@ export class DemoController {
   _exists(item, list) {
     return list.indexOf(item) > -1;
   }
+
+  toast(msg) {
+    this.$mdToast.show(
+      this.$mdToast.simple()
+        .textContent(msg)
+        .position('bottom right')
+        .hideDelay(3000)
+    );
+  };
 
   showAlert(ev) {
     // Appending dialog to document.body to cover sidenav in docs app

@@ -20,7 +20,7 @@
       </section>
       <section layout="row">
         <fieldset class="standard" flex="1">
-          <legend>Checkboxes</legend>
+          <legend class="md-subhead">Checkboxes</legend>
           <div layout="row" layout-wrap flex>
             <div flex="50" ng-repeat="item in vm.items">
               <md-checkbox ng-checked="vm.exists(item, vm.selected)" ng-click="vm.toggle(item, vm.selected)">
@@ -32,12 +32,12 @@
       </section>
     </div>
 
-    <div flex="50" flex-xs="100">
+    <div flex="50" flex-xs="100" class="sliders">
       <header>
-        <h2 flex="100" class="md-headline">Buttons</h2>
+        <h2 flex="100" class="md-subhead">Sliders</h2>
       </header>
       <section layout="row">
-        <div class="md-body-1">R</div>
+        <div class="md-body-1 sliders__label">R</div>
         <md-slider flex="1" min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
         </md-slider>
         <div layout layout-align="center center">
@@ -45,7 +45,7 @@
         </div>
       </section>
       <section layout="row">
-        <div class="md-body-1">G</div>
+        <div class="md-body-1 sliders__label">G</div>
         <md-slider flex="1" min="0" max="255" ng-model="color.green" aria-label="green" id="green-slider" class>
         </md-slider>
         <div layout layout-align="center center">
@@ -53,7 +53,7 @@
         </div>
       </section>
       <section layout="row">
-        <div class="md-body-1">B</div>
+        <div class="md-body-1 sliders__label">B</div>
         <md-slider flex="1" min="0" max="255" ng-model="color.blue" aria-label="blue" id="blue-slider" class>
         </md-slider>
         <div layout layout-align="center center">
@@ -66,7 +66,7 @@
 
   <div>
     <div layout>
-      <md-button class="md-accent md-fab md-fab-bottom-right">
+      <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="vm.toast('Download at: https://github.com/juhamust/silverplate')">
         <md-icon class="material-icons md-48">cloud_download</md-icon>
       </md-button>
     </div>

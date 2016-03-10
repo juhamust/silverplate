@@ -13,7 +13,6 @@ export class NavbarController {
   }
 
   _toggleLove() {
-    console.log('togglel', this.loved);
     this.loved = !this.loved;
   }
 
