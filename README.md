@@ -7,7 +7,7 @@ with following features (preconfigured and read to use):
 - **Gulp** with some commonly used plugins
 - **Webpack** with both development and production optimized builds: Autoreload, minification
 - **Angular 1.x** with component support (Angular 1.5) and commonly used modules
-- **Bootstrap** 4.x with Sass
+- **Material design** to create easily and good looking
 - **Generator** for components, services and views
 - **Karma** for unit testing with both Chrome and PhantomJS
 - **Docker** for hosting server
@@ -37,6 +37,7 @@ That's it, happy hacking!
 #### Material design
 
 - Icons: https://design.google.com/icons/
+- Definitions: https://material.angularjs.org/
 
 #### Docker(file)
 
@@ -52,6 +53,10 @@ Now you're able to access outcome with browser: http://<dockerhost>:<port>/
 Apache 2
 
 ## Release notes
+
+#### 0.3.0 (10.3.2016)
+
+- Switched from Bootstrap to Angular Material ([use release 0.2.x](https://github.com/juhamust/silverplate/tree/v0.2.0) if you want to keep using Bootstrap instead)
 
 #### 0.2.0 (25.2.2016)
 
