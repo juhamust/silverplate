@@ -1,7 +1,7 @@
 {
   "name": "sixpack",
-  "version": "0.2.0-beta.1",
-  "description": "Boilerplate to start with ES6, Webpack, Angular and Bootstrap",
+  "version": "0.3.0",
+  "description": "Boilerplate to start with ES6, Webpack, Angular and Material",
   "main": "index.js",
   "devDependencies": {
     "angular": "^1.5.0",
@@ -9,14 +9,11 @@
     "angular-mocks": "^1.5.0",
     "angular-nvd3": "^1.0.5",
     "angular-sanitize": "^1.4.9",
-    "angular-ui-bootstrap": "^1.0.0",
     "angular-ui-router": "^0.2.18",
     "autoprefixer": "^6.3.1",
     "babel-core": "^5.4.2",
     "babel-loader": "^5.0.0",
     "bluebird": "^3.2.2",
-    "bootstrap-loader": "^1.0.5",
-    "bootstrap-sass": "^3.3.6",
     "browser-sync": "^2.7.1",
     "chai": "^3.4.0",
     "chalk": "^1.1.1",
@@ -67,6 +64,8 @@
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4",
     "webpack-stream": "^2.0.0",
+    "angular-animate": "^1.5.0",
+    "angular-material": "^1.0.6",
     "yargs": "^3.9.0"
   },
   "scripts": {
@@ -88,5 +87,9 @@
     "url": "https://github.com/juhamust/silverplate.git"
   },
   "author": "Juha Mustonen",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "angular-aria": "^1.5.0",
+    "angular-messages": "^1.5.0"
+  }
 }

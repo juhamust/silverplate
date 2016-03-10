@@ -1,0 +1,13 @@
+<div class="sidenav">
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-content layout-padding>
+      <md-list ng-cloak>
+        <md-subheader class="md-no-sticky">Navigate to</md-subheader>
+        <md-list-item ng-click="vm.navigateTo(menuItem.state, $event)" ng-repeat="menuItem in vm.menuItems">
+          <md-icon class="material-icons" ng-class="{'md-accent': vm.isActive(menuItem.state)}">pages</md-icon>
+          <p> {{ menuItem.title }} </p>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+</div>

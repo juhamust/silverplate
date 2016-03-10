@@ -20,9 +20,7 @@ module.exports = {
       'jquery',
       'angular',
       'angular-ui-router',
-      'angular-ui-bootstrap',
-      'angular-component',
-      'bootstrap-loader'
+      'angular-component'
     ]
   },
   resolve: {
@@ -44,7 +42,6 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
       { test: /\.html$/, loader: 'raw' },
       { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass' ]},
       { test: /\.css$/, loaders: ['style', 'css', 'postcss' ]},

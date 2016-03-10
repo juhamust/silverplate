@@ -1,29 +1,69 @@
-<div class="demo container-fluid">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1 class="demo__title">{{ vm.name }}</h1>
-      <div class="alert alert-success" role="alert">This is a successful alert example!</div>
+<div class="demo">
+  <md-content layout-padding>
 
-      <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    <section layout="row" layout-xs="column">
+
+      <div flex="50" flex-xs="100">
+        <header>
+          <h2 flex="100" class="md-headline">Forms</h2>
+        </header>
+        <section layout="row">
+          <md-input-container flex="1">
+            <label>Question</label>
+            <input ng-model="vm.question">
+          </md-input-container>
+          <md-input-container>
+            <md-button flex class="md-raised md-primary" ng-click="vm.showCustomDialog($event)">Answer</md-button>
+          </md-input-container>
+        </section>
+        <section layout="row">
+          <fieldset class="standard" flex="1">
+            <legend class="md-subhead">Checkboxes</legend>
+            <div layout="row" layout-wrap flex>
+              <div flex="50" ng-repeat="item in vm.items">
+                <md-checkbox ng-checked="vm.exists(item, vm.selected)" ng-click="vm.toggle(item, vm.selected)">
+                  {{ item }} <span ng-if="vm.exists(item, vm.selected)">selected</span>
+                </md-checkbox>
+              </div>
+            </div>
+          </fieldset>
+        </section>
       </div>
 
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" ng-class="vm.progressClass" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" ng-style="vm.progressStyle">
-          <span class="sr-only">45% Complete</span>
-        </div>
+      <div flex="50" flex-xs="100" class="sliders">
+        <header>
+          <h2 flex="100" class="md-subhead">Sliders</h2>
+        </header>
+        <section layout="row">
+          <div class="md-body-1 sliders__label">R</div>
+          <md-slider flex="1" min="0" max="255" ng-model="vm.color.red" aria-label="red" id="red-slider" class>
+          </md-slider>
+          <div layout flex-offset="5" layout-align="center center">
+            <input type="number" ng-model="vm.color.red" aria-label="red" aria-controls="red-slider">
+          </div>
+        </section>
+        <section layout="row">
+          <div class="md-body-1 sliders__label">G</div>
+          <md-slider flex="1" min="0" max="255" ng-model="vm.color.green" aria-label="green" id="green-slider" class>
+          </md-slider>
+          <div layout flex-offset="5" layout-align="center center">
+            <input type="number" ng-model="vm.color.green" aria-label="green" aria-controls="green-slider">
+          </div>
+        </section>
+        <section layout="row">
+          <div class="md-body-1 sliders__label">B</div>
+          <md-slider flex="1" min="0" max="255" ng-model="vm.color.blue" aria-label="blue" id="blue-slider" class>
+          </md-slider>
+          <div layout flex-offset="5" layout-align="center center">
+            <input type="number" ng-model="vm.color.blue" aria-label="blue" aria-controls="blue-slider">
+          </div>
+        </section>
       </div>
 
-      <div class="row">
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-success demo__button center-block" ng-click="vm.colorMe()">Color me!</button>
-        </div>
-        <div class="col-xs-6">
-          <button type="button" class="btn btn-info demo__button center-block" ng-click="vm.fetchRepoInfo()">Repo stars? {{ vm.starCount }}</button>
-        </div>
-      </div>
+    </section>
+  </md-content>
 
-    </div>
-  </div>
+  <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="vm.toast('Download at: https://github.com/juhamust/silverplate')">
+    <md-icon class="material-icons md-48">cloud_download</md-icon>
+  </md-button>
 </div>
