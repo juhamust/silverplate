@@ -6,6 +6,7 @@
   background: linear-gradient(to bottom, #004d7c 0%, #005c94 21%, #005c94 100%);
   padding: 0 2rem;
   margin: 0;
+  border-top: 1px solid #fff;
 }
 
 .jumbotron {
@@ -22,4 +23,9 @@
   background-position: center;
   height: 200px;
   min-width: 400px;
+}
+
+.jumbotron__body {
+  margin: 0;
+  padding: 16px 0;
 }

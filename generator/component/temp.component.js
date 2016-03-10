@@ -1,4 +1,5 @@
 import template from './<%= slugCaseName %>.html';
+import './<%= pascalCaseName %>.scss';
 
 let $inject = [];
 export class <%= pascalCaseName %>Controller {

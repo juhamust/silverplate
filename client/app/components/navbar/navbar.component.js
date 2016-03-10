@@ -1,24 +1,27 @@
 import template from './navbar.html';
 import './navbar.scss';
 
-let $inject = ['$state'];
+let $inject = ['$state', '$mdSidenav'];
 export class NavbarController {
-  constructor($state) {
+  constructor($state, $mdSidenav) {
     this.name = 'navbar';
     this.$state = $state;
-
-    this.isCollapsed = true;
-    this.menu = [{
-      title: 'Home',
-      state: 'home'
-    }, {
-      title: 'Demo',
-      state: 'demo'
-    }];
+    this.$mdSidenav = $mdSidenav;
+    this.toggleSidenav = this._toggleSidenav.bind(this);
+    this.toggleLove = this._toggleLove.bind(this);
+    this.loved = false;
   }
 
-  isActive(state) {
-    return state === this.$state.current.name;
+  _toggleLove() {
+    this.loved = !this.loved;
+  }
+
+  _toggleSidenav(navId) {
+    this.$mdSidenav(navId)
+      .toggle()
+      .then(function () {
+        // Nav opened/closed
+      });
   }
 }
 
