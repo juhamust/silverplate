@@ -6,6 +6,7 @@ import Services from './services';
 import Components from './components';
 import Views from './views';
 
+import './assets/styles/variables.scss';
 import 'angular-material/angular-material.scss';
 import 'highlight.js/styles/github.css';
 import './app.scss';

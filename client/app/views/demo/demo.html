@@ -1,75 +1,69 @@
-<div class="demo container-fluid">
+<div class="demo">
+  <md-content layout-padding>
 
+    <section layout="row" layout-xs="column">
 
-
-
-  <section layout="row" layout-xs="column">
-
-    <div flex="50" flex-xs="100">
-      <header>
-        <h2 flex="100" class="md-headline">Forms</h2>
-      </header>
-      <section layout="row">
-        <md-input-container flex="1">
-          <label>Question</label>
-          <input ng-model="vm.question">
-        </md-input-container>
-        <md-input-container>
-          <md-button flex class="md-raised md-primary" ng-click="vm.showCustomDialog($event)">Answer</md-button>
-        </md-input-container>
-      </section>
-      <section layout="row">
-        <fieldset class="standard" flex="1">
-          <legend class="md-subhead">Checkboxes</legend>
-          <div layout="row" layout-wrap flex>
-            <div flex="50" ng-repeat="item in vm.items">
-              <md-checkbox ng-checked="vm.exists(item, vm.selected)" ng-click="vm.toggle(item, vm.selected)">
-                {{ item }} <span ng-if="vm.exists(item, vm.selected)">selected</span>
-              </md-checkbox>
+      <div flex="50" flex-xs="100">
+        <header>
+          <h2 flex="100" class="md-headline">Forms</h2>
+        </header>
+        <section layout="row">
+          <md-input-container flex="1">
+            <label>Question</label>
+            <input ng-model="vm.question">
+          </md-input-container>
+          <md-input-container>
+            <md-button flex class="md-raised md-primary" ng-click="vm.showCustomDialog($event)">Answer</md-button>
+          </md-input-container>
+        </section>
+        <section layout="row">
+          <fieldset class="standard" flex="1">
+            <legend class="md-subhead">Checkboxes</legend>
+            <div layout="row" layout-wrap flex>
+              <div flex="50" ng-repeat="item in vm.items">
+                <md-checkbox ng-checked="vm.exists(item, vm.selected)" ng-click="vm.toggle(item, vm.selected)">
+                  {{ item }} <span ng-if="vm.exists(item, vm.selected)">selected</span>
+                </md-checkbox>
+              </div>
             </div>
+          </fieldset>
+        </section>
+      </div>
+
+      <div flex="50" flex-xs="100" class="sliders">
+        <header>
+          <h2 flex="100" class="md-subhead">Sliders</h2>
+        </header>
+        <section layout="row">
+          <div class="md-body-1 sliders__label">R</div>
+          <md-slider flex="1" min="0" max="255" ng-model="vm.color.red" aria-label="red" id="red-slider" class>
+          </md-slider>
+          <div layout flex-offset="5" layout-align="center center">
+            <input type="number" ng-model="vm.color.red" aria-label="red" aria-controls="red-slider">
           </div>
-        </fieldset>
-      </section>
-    </div>
+        </section>
+        <section layout="row">
+          <div class="md-body-1 sliders__label">G</div>
+          <md-slider flex="1" min="0" max="255" ng-model="vm.color.green" aria-label="green" id="green-slider" class>
+          </md-slider>
+          <div layout flex-offset="5" layout-align="center center">
+            <input type="number" ng-model="vm.color.green" aria-label="green" aria-controls="green-slider">
+          </div>
+        </section>
+        <section layout="row">
+          <div class="md-body-1 sliders__label">B</div>
+          <md-slider flex="1" min="0" max="255" ng-model="vm.color.blue" aria-label="blue" id="blue-slider" class>
+          </md-slider>
+          <div layout flex-offset="5" layout-align="center center">
+            <input type="number" ng-model="vm.color.blue" aria-label="blue" aria-controls="blue-slider">
+          </div>
+        </section>
+      </div>
 
-    <div flex="50" flex-xs="100" class="sliders">
-      <header>
-        <h2 flex="100" class="md-subhead">Sliders</h2>
-      </header>
-      <section layout="row">
-        <div class="md-body-1 sliders__label">R</div>
-        <md-slider flex="1" min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
-        </md-slider>
-        <div layout layout-align="center center">
-          <input type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
-        </div>
-      </section>
-      <section layout="row">
-        <div class="md-body-1 sliders__label">G</div>
-        <md-slider flex="1" min="0" max="255" ng-model="color.green" aria-label="green" id="green-slider" class>
-        </md-slider>
-        <div layout layout-align="center center">
-          <input type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
-        </div>
-      </section>
-      <section layout="row">
-        <div class="md-body-1 sliders__label">B</div>
-        <md-slider flex="1" min="0" max="255" ng-model="color.blue" aria-label="blue" id="blue-slider" class>
-        </md-slider>
-        <div layout layout-align="center center">
-          <input type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
-        </div>
-      </section>
-    </div>
+    </section>
+  </md-content>
 
-  </section>
-
-  <div>
-    <div layout>
-      <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="vm.toast('Download at: https://github.com/juhamust/silverplate')">
-        <md-icon class="material-icons md-48">cloud_download</md-icon>
-      </md-button>
-    </div>
-  </div>
-
+  <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="vm.toast('Download at: https://github.com/juhamust/silverplate')">
+    <md-icon class="material-icons md-48">cloud_download</md-icon>
+  </md-button>
 </div>

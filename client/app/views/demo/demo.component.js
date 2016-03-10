@@ -11,6 +11,12 @@ export class DemoController {
     this.$mdDialog = $mdDialog;
     this.$mdToast = $mdToast;
     this.question = 'Follow the white rabbit?';
+    this.answer;
+    this.color = {
+      red: 0,
+      green: 0,
+      blue: 0
+    };
     this.starCount = '-';
     this.progressValue = 0;
     this.progressStyle = {
@@ -75,6 +81,8 @@ export class DemoController {
   };
 
   showCustomDialog(ev) {
+    this.answer = null;
+
     // Show custom dialog using components and component variables
     this.$mdDialog.show({
       template: `
@@ -100,14 +108,26 @@ export class DemoController {
       }]
     })
     .then((answer) => {
-      console.log('Answer', answer);
-    }, (answer) => {
-      console.log('Cancel', answer);
+      this.answer = answer;
+      this.changeColor(this.answer);
+    })
+    .catch((answer) => {
+      this.answer = answer;
+      this.changeColor(this.answer);
     });
   }
 
-  colorMe() {
-    this.progressClass['progress-bar-success'] = !this.progressClass['progress-bar-success'];
+  changeColor(name) {
+    if (!name) {
+      return;
+    }
+
+    let colors = {
+      blue: { red: 0, green: 0, blue: 255 },
+      red: { red: 255, green: 0, blue: 0 }
+    };
+    this.color = colors[this.answer];
+    console.log('CHANGEC', this.color);
   }
 
   fetchRepoInfo() {
