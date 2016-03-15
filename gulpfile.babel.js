@@ -19,7 +19,7 @@ import colorsSupported from 'supports-color';
 import highlight from 'highlight.js';
 import marked from 'marked';
 
-
+const argv = yargs.argv;
 var plugins = loader();
 let reload = () => serve.reload();
 let root = path.join(__dirname, 'client');
@@ -98,6 +98,8 @@ gulp.task('markdown', (cb) => {
 })
 
 gulp.task('webpack', (cb) => {
+  process.env.HOST_PATH = argv.hostPath || '';
+
   const config = require('./webpack.config');
   config.entry.app = paths.entry;
 

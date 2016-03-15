@@ -11,13 +11,13 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <base href="/">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="app.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{%= o.htmlWebpackPlugin.options.hostPath %}/app.css" media="screen" charset="utf-8">
   </head>
   <body ng-app="app" ng-strict-di ng-cloak>
     <app>
       Loading...
     </app>
-    <script src="lib.js"></script>
-    <script src="app.js"></script>
+    <script src="{%= o.htmlWebpackPlugin.options.hostPath %}/lib.js"></script>
+    <script src="{%= o.htmlWebpackPlugin.options.hostPath %}/app.js"></script>
   </body>
 </html>

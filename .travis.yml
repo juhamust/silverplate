@@ -1,5 +1,10 @@
+env:
+  global:
+  - GH_REF: github.com/juhamust/silverplate.git
+  - secure: "fK+RtQTeYsgb2GRXBJf8VIkHyp0LMp9NVb8oy18vHZK8PQ1CkhFvpPP0tTTgyBXaxb3bdGAQqO/iA1dMahJhT+KmjcHWMNCIIhEaIT7+v9iUUKmz/WJ1rq1uCrldbdjsNU9EJ+MCtJw5FCCJQyFAb9+L9no2Vz0HoslK76SAHVKCrH9Z0cQqGoTAqAMqRIOzHOUDqT/9PX98jV1xtd8kedtW5Q2hhCdBAsrwNn5h7LBh6H/kUJm3nTD66C0txSDcWyf3/6tk/8TntpjkHRFcURMmo39+27DXhs9Qx6R+DQRGU3zg/VDEAHQ79xYDQzzVFew63lisSTaV3r5yUuc6E3m/pcVE/0uVJsVZRJixZwZRWD/rPp2Owh0jXAWkiImSEhUhqJMCmMAW6mpRr8atTMq/rZkVknXvhymfzRplGdmhyx6RzvTYG65d8WYrX1LiW4izEGJq2OqG2LyntUCmoNnkQa0vkvUftJPR/y//3Hgz3NpktvkUxtAxJF8+cbz/CC0xKtUoLPgK7M1c+u0q6u1XDvLe/VVim+scDZ3/D2OH7JiXXmMHr83E+0snsyhRd4gtQ0JrVJviRIla2kUpxpG/sHaJuvRgMbQl8SIpFvi4qjdJtas7wEsulQ6P/A4RPFmmPzMbelicz6+HmDCjrR46goKTEQIOpQHXZDOAM1g="
 language: node_js
 node_js:
   - "4.1"
   - "4.0"
   - "0.12"
+after_success: bash ./deploy-pages.sh
