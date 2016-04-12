@@ -9,7 +9,6 @@
 */
 
 import angular from 'angular';
-import angularComponent from 'angular-component';
 // Built by the core Angular team for mocking dependencies
 import mocks from 'angular-mocks';
 

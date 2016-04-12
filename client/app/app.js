@@ -1,7 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
-import angularComponent from 'angular-component';
 import Services from './services';
 import Components from './components';
 import Views from './views';

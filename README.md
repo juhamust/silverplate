@@ -46,13 +46,19 @@ If you don't have Docker installed, [see Docker instructions](https://www.docker
 - Build Docker image: `npm run build:image`
 - Run Docker image: `npm run start:image`
 
-Now you're able to access outcome with browser: http://<dockerhost>:<port>/
+Now you're able to access outcome with browser: `http://<dockerhost>:<port>/`
 
 ## License
 
 Apache 2
 
 ## Release notes
+
+#### 0.3.1 (12.4.2016)
+
+- Updated to Angular 1.5 and removed angular-component
+- Fixed building in some environments: Upgraded Babel
+- Added support for setting the host base path: Handy with GitHub Pages
 
 #### 0.3.0 (10.3.2016)
 

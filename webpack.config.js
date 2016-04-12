@@ -33,6 +33,7 @@ module.exports = {
     new ExtractTextPlugin('app.css', { allChunks: true }),
     new HtmlWebpackPlugin({
       version: packageInfo.version,
+      hostPath: process.env.HOST_PATH || '',
       template: 'client/index.html'
     }),
     new CommonsChunkPlugin({
