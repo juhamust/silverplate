@@ -54,6 +54,12 @@ Apache 2
 
 ## Release notes
 
+#### 0.3.1 (12.4.2016)
+
+- Updated to Angular 1.5 and removed angular-component
+- Fixed building in some environments: Upgraded Babel
+- Added support for setting the host base path: Handy with GitHub Pages
+
 #### 0.3.0 (10.3.2016)
 
 - Switched from Bootstrap to Angular Material ([use release 0.2.x](https://github.com/juhamust/silverplate/tree/v0.2.0) if you want to keep using Bootstrap instead)
