@@ -44,6 +44,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
       { test: /\.html$/, loader: 'raw' },
+      { test: /\.json$/, loader: 'json' },
       { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass' ]},
       { test: /\.css$/, loaders: ['style', 'css', 'postcss' ]},
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=10000&minetype=application/font-woff' },
