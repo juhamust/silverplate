@@ -43,7 +43,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
-      { test: /\.html$/, loader: 'raw' },
+      { test: /\.html$/, loader: 'html' },
       { test: /\.json$/, loader: 'json' },
       { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass' ]},
       { test: /\.css$/, loaders: ['style', 'css', 'postcss' ]},

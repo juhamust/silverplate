@@ -4,12 +4,13 @@
   "description": "Boilerplate to start with ES6, Webpack, Angular and Material",
   "main": "index.js",
   "devDependencies": {
-    "angular": "^1.5.0",
-    "angular-animate": "^1.5.0",
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
     "angular-component": "^0.0.3",
-    "angular-material": "^1.0.6",
-    "angular-mocks": "^1.5.0",
-    "angular-nvd3": "^1.0.5",
+    "angular-material": "^1.0.9",
+    "angular-messages": "^1.5.7",
+    "angular-mocks": "^1.5.7",
     "angular-sanitize": "^1.4.9",
     "angular-ui-router": "^0.2.18",
     "autoprefixer": "^6.3.1",
@@ -31,6 +32,7 @@
     "gulp-template": "^3.0.0",
     "gulp-util": "^3.0.7",
     "highlight.js": "^9.1.0",
+    "html-loader": "^0.4.3",
     "html-webpack-plugin": "^1.7.0",
     "image-webpack-loader": "^1.6.3",
     "imports-loader": "^0.6.5",
@@ -90,9 +92,5 @@
     "url": "https://github.com/juhamust/silverplate.git"
   },
   "author": "Juha Mustonen",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "angular-aria": "^1.5.0",
-    "angular-messages": "^1.5.0"
-  }
+  "license": "Apache-2.0"
 }

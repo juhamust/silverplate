@@ -54,6 +54,13 @@ Apache 2
 
 ## Release notes
 
+
+#### 0.4.0 (dd.7.2016)
+
+- Updated Angular and Angular Material modules
+- Started using html loader
+- Added image example
+
 #### 0.3.1 (12.4.2016)
 
 - Updated to Angular 1.5 and removed angular-component
