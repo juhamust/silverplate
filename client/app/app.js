@@ -1,3 +1,4 @@
+'use strict';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngMaterial from 'angular-material';
@@ -18,20 +19,21 @@ let appComponent = {
 
 angular.module('app', [
   uiRouter,
-  //uiBootstrap,
   ngMaterial,
   Services.name,
   Components.name,
   Views.name
 ])
 
-.config(($urlRouterProvider, $mdThemingProvider) => {
+.config(($urlRouterProvider, $mdThemingProvider, $locationProvider) => {
   'ngInject';
 
   // Material theme
   $mdThemingProvider
     .theme('default')
     .primaryPalette('blue');
+
+  $locationProvider.html5Mode(true).hashPrefix('!');
 
   // Router
   $urlRouterProvider.when('', '/');

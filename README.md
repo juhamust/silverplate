@@ -60,6 +60,7 @@ Apache 2
 - Updated Angular and Angular Material modules
 - Started using html loader
 - Added image example
+- Added support for HTML5 mode
 
 #### 0.3.1 (12.4.2016)
 

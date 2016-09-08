@@ -18,6 +18,7 @@ import webpachHotMiddelware from 'webpack-hot-middleware';
 import colorsSupported from 'supports-color';
 import highlight from 'highlight.js';
 import marked from 'marked';
+import historyApiFallback from 'connect-history-api-fallback';
 
 const argv = yargs.argv;
 var plugins = loader();
@@ -135,6 +136,7 @@ gulp.task('serve', () => {
     open: false,
     server: { baseDir: paths.output },
     middleware: [
+      historyApiFallback(),
       webpackDevMiddelware(compiler, {
         stats: {
           colors: colorsSupported,
